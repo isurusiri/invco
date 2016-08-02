@@ -21,7 +21,7 @@ namespace Invco.Container
             return (T) Resolve(typeof (T));
         }
 
-        public static object Resolve(Type contract)
+        private static object Resolve(Type contract)
         {
             Type implementation = Types[contract];
             ConstructorInfo constructor = implementation.GetConstructors()[0];
