@@ -2,17 +2,20 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>$version$</version>
+    <version>1.0.4</version>
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
     <licenseUrl>https://github.com/isurusiri/invco/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/isurusiri/invco/blob/master/LICENSE</projectUrl>
+    <projectUrl>https://github.com/isurusiri/invco/</projectUrl>
     <iconUrl>https://www.lancope.com/sites/default/files/icon-professional-services-large.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial release of the package.</releaseNotes>
+    <releaseNotes>Public interface release of the package.</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>IoC</tags>
   </metadata>
+  <files>
+    <file src="bin\Release\Invco.dll" target="lib\net452" /> 
+  </files>
 </package>
