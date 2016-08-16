@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Invco")]
 [assembly: AssemblyProduct("Invco")]
-[assembly: AssemblyCopyright("Copyright © Invco 2016")]
+[assembly: AssemblyCopyright("Copyright © Invco Developers 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
