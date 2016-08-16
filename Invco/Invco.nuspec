@@ -6,7 +6,7 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <licenseUrl>https://github.com/isurusiri/invco/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/isurusiri/invco/blob/master/LICENSE</projectUrl>
     <iconUrl>https://www.lancope.com/sites/default/files/icon-professional-services-large.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
