@@ -10,6 +10,5 @@ namespace Invco.Attributes
     [AttributeUsage(AttributeTargets.Class)]
     public class Component : Attribute
     {
-        public Scopes Scope { get; set; }
     }
 }
