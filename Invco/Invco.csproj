@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\Component.cs" />
+    <Compile Include="Attributes\Inject.cs" />
     <Compile Include="Container\IoCContainer.cs" />
     <Compile Include="Controllers\IoCController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
