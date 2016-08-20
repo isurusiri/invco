@@ -43,6 +43,7 @@
     <Compile Include="Attributes\Inject.cs" />
     <Compile Include="Container\IoCContainer.cs" />
     <Compile Include="Controllers\IoCController.cs" />
+    <Compile Include="General\Scopes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
