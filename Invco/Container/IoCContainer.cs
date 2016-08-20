@@ -14,12 +14,22 @@ namespace Invco.Container
             Types[typeof (TContract)] = typeof (TImplementation);
         }
 
-        public static T Resolve<T>()
+        public static void Register(Type contract, Type implementatioin)
         {
-            return (T) Resolve(typeof (T));
+            Types[contract] = implementatioin;
         }
 
-        private static object Resolve(Type contract)
+        public static T Resolve<T>()
+        {
+            return (T) ResolveType(typeof (T));
+        }
+
+        public static Type Resolve(Type implementation)
+        {
+            return (Type) ResolveType(implementation);
+        }
+
+        private static object ResolveType(Type contract)
         {
             Type implementation = Types[contract];
             ConstructorInfo constructor = implementation.GetConstructors()[0];
