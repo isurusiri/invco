@@ -21,6 +21,7 @@ namespace Invco.Container
         /// </summary>
         /// <typeparam name="TContract">Interface of the dependency</typeparam>
         /// <typeparam name="TImplementation">Implementation of the dependency</typeparam>
+        [Obsolete("Registering and Resolving dependencies with generic types is discouraged from V1.0.5")]
         public static void Register<TContract, TImplementation>()
         {
             Types[typeof (TContract)] = typeof (TImplementation);
@@ -45,6 +46,7 @@ namespace Invco.Container
         /// </summary>
         /// <typeparam name="T">Genric type of the dependency to be resolved</typeparam>
         /// <returns>Resolved implementation of a dependency</returns>
+        [Obsolete("Registering and Resolving dependencies with generic types is discouraged from V1.0.5")]
         public static T Resolve<T>()
         {
             return (T) ResolveType(typeof (T));
