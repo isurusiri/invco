@@ -41,8 +41,10 @@
   <ItemGroup>
     <Compile Include="Attributes\Component.cs" />
     <Compile Include="Attributes\Inject.cs" />
-    <Compile Include="Container\IoCContainer.cs" />
+    <Compile Include="Core\Container\IoCContainer.cs" />
     <Compile Include="Controllers\IoCController.cs" />
+    <Compile Include="Core\Context\ApplicationContext.cs" />
+    <Compile Include="Core\Context\ContextInitializer.cs" />
     <Compile Include="General\Scopes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
