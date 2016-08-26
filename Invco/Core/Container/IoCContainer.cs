@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Invco.Core.Context;
 
-namespace Invco.Container
+namespace Invco.Core.Container
 {
     /// <summary>
     /// Class that keeps a record of all dependencies.
@@ -12,8 +13,6 @@ namespace Invco.Container
     /// </summary>
     internal static class IoCContainer
     {
-        static readonly IDictionary<Type, Type> Types = new Dictionary<Type, Type>();
-
         /// <summary>
         /// Registers dependencies with their interface and implementation.
         /// This method can be used when the contract and implementation is
@@ -24,7 +23,7 @@ namespace Invco.Container
         [Obsolete("Registering and Resolving dependencies with generic types is discouraged from V1.0.5")]
         public static void Register<TContract, TImplementation>()
         {
-            Types[typeof (TContract)] = typeof (TImplementation);
+            ApplicationContext.Types[typeof (TContract)] = typeof (TImplementation);
         }
 
         /// <summary>
@@ -36,7 +35,7 @@ namespace Invco.Container
         /// <param name="implementatioin">Implementation of the dependency</param>
         public static void Register(Type contract, Type implementatioin)
         {
-            Types[contract] = implementatioin;
+            ApplicationContext.Types[contract] = implementatioin;
         }
 
         /// <summary>
@@ -73,7 +72,7 @@ namespace Invco.Container
         /// <returns>Resolved implementation of a dependency</returns>
         private static object ResolveType(Type contract)
         {
-            Type implementation = Types[contract];
+            Type implementation = ApplicationContext.Types[contract];
             ConstructorInfo constructor = implementation.GetConstructors()[0];
             ParameterInfo[] constructorParameters = constructor.GetParameters();
 
